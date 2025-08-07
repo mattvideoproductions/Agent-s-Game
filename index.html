@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bathtub Fluid with Ducks</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Bathtub Fluid with Ducks</h1>
+        <div class="controls">
+          <button id="btnReset" title="Clear water and ducks">Reset</button>
+          <button id="btnAddDuck" title="Spawn a duck">Add Duck</button>
+          <label class="ctrl">
+            <span>Flow</span>
+            <input id="rangeForce" type="range" min="10" max="400" value="140" />
+          </label>
+          <label class="ctrl">
+            <span>Viscosity</span>
+            <input id="rangeVisc" type="range" min="0" max="0.003" step="0.0005" value="0.001" />
+          </label>
+          <label class="ctrl">
+            <span>Buoyancy</span>
+            <input id="rangeBuoy" type="range" min="0" max="40" step="1" value="18" />
+          </label>
+          <label class="ctrl">
+            <input id="chkRain" type="checkbox" />
+            <span>Rain</span>
+          </label>
+        </div>
+      </header>
+
+      <main>
+        <div class="canvas-wrap">
+          <canvas id="sim" width="960" height="600"></canvas>
+          <div class="hint">
+            - Drag to pour water and stir
+            - Shift+drag to drain
+            - Click "Add Duck" to spawn more
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <span>Stable-fluids-inspired demo. Just for fun 🛁🦆</span>
+      </footer>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
